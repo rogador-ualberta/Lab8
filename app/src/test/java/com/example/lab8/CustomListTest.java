@@ -37,14 +37,14 @@ public class CustomListTest {
     }
 
     @Test
-    void testHasCity(){
-        CustomList cityList = MockCityList();
+    public void testHasCity(){
+        list = MockCityList();
         //Test if city is in list
         City oldCity = new City("Windsor", "Ontario");
-        cityList.add(oldCity);
-        assertTrue(cityList.hasCity(oldCity));
+        list.addCity(oldCity);
+        assertTrue(list.hasCity(oldCity));
         //Test if city is not in list
         City newCity = new City("Calgary", "Alberta");
-        assertFalse(cityList.hasCity(newCity));
+        assertFalse(list.hasCity(newCity));
     }
 }
